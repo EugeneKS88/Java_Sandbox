@@ -1,3 +1,5 @@
+package ru.stqa.pft.sandbox;
+
 /*
 Демонстрация приведения типов
 */
