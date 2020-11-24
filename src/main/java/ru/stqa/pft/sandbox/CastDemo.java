@@ -5,28 +5,27 @@ package ru.stqa.pft.sandbox;
 */
 public class CastDemo {
     public static void main(String[] args) {
-        double x, y;
-        byte b;
-        int i;
-        char ch;
+        hello("world");
+        hello("user");
 
-        x = 10.0;
-        y = 3.0;
-        i = (int) (x / y); // приводим тип double к типу int (теряется дробная часть)
-        System.out.println("Целочисленный результат деления x / y: " + i);
+        double l = 5;
+        System.out.println("Площадь квадрата со стороной " + l + " = " + area(l));
 
-        i = 100;
-        b = (byte) i; // информация не теряется, тип byte может содержать значение 100
-        System.out.println("Значение b: " + b);
-
-        i = 257;
-        b = (byte) i; // информация теряется, тип byte не может содержать значение 257
-        System.out.println("Значение b: " + b);
-
-        b = 88; // представление символа X в коде ASCII
-        ch = (char) b; // приведение несовместимых типов
-        System.out.println("ch: " + ch);
-
+        double a = 4;
+        double b = 6;
+        System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + area(a, b));
     }
-    
+
+    public static void hello(String somebody) {
+                System.out.println("Hello, " + somebody + "!");
+    }
+
+    public static double area(double l) {
+        return l * l;
+    }
+
+    public static double area(double a, double b) {
+        return a * b;
+    }
+
 }
